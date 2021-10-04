@@ -1,0 +1,27 @@
+input.ng-invalid.ng-touched{
+    border:solid 2px tomato !important;
+}
+
+input.ng-valid{
+    border: solid 2px green !important;
+}
+
+select.ng-invalid.ng-touched{
+    border:solid 2px tomato !important;
+}
+
+select.ng-valid{
+    border: solid 2px green !important;
+}
+
+input.ng-valid{
+    border: solid 2px green !important;
+}
+
+.control-error{
+    font-size: 0.8rem;
+    color: red;
+}
+p{
+    display: inline;
+}

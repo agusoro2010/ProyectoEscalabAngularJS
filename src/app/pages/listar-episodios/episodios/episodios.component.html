@@ -1,0 +1,23 @@
+<div class="container-fluid" style="margin-top: 20px;">
+	<div class="row">
+		<div class="col-md-12">
+            <div class="row justify-content-md-center">
+                <div class="col-md-4 " *ngFor="let episodio of episodios">
+                    <div id="card_container">
+                        <div id="card">
+                            <div class="text-block">
+                                <h1>{{episodio.name}} <small>( {{episodio.air_date | date:'dd-MM-yyyy'}} )</small></h1>
+                                <h3>Dirigido por: {{episodio.director}}</h3>
+                                <h3>Escrito por: {{episodio.writer}}</h3>
+                                <h3>Personajes:</h3>
+                                <p style="display: inline;" *ngFor="let personaje of episodio.characters">
+                                    <img style="width: 50px; height: 50px; padding: 2px;" src="{{muestroImagenPersonaje( personaje | imagenPersonajes)}}" alt="">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

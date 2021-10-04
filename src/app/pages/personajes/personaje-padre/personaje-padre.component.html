@@ -1,0 +1,47 @@
+    <div class="container">
+        <br><br>
+    <div class="col" style="text-align: center;">
+        <h1>Comunicación Componente -->Padre<-- </h1>
+    </div>
+    <br><br>
+    <form class="form-group row">
+        <div class="form-group col-md-3">
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre" placeholder="Nombre" class="form-control" [(ngModel)]="cuadroNombre" >
+        </div>
+        <div class="form-group col-md-3">
+            <label for="estado">Estado</label>
+            <input type="text" name="estado" id="estado" placeholder="Estado" class="form-control" [(ngModel)]="cuadroEstado">
+        </div>
+        <div class="form-group col-md-3">
+            <label for="especie">Especie</label>
+            <input type="text" name="especie" id="especie" placeholder="Especie" class="form-control" [(ngModel)]="cuadroEspecie">
+        </div>
+        <div class="form-group col-md-3">
+            <label for="Origen">Origen</label>
+            <input type="text" name="origen" id="origen" placeholder="Origen" class="form-control" [(ngModel)]="cuadroOrigen">
+        </div>
+        <div class="form-group col-md-3">
+            <label for="Genero">Genero</label>
+            <input type="text" name="genero" id="genero" placeholder="Genero" class="form-control" [(ngModel)]="cuadroGenero">
+        </div>
+        <div class="col">
+            <button type="submit" class="btn btn-primary mt-4" (click)="agregarPersonaje()">Agregar</button>
+        </div>
+    </form>
+    <br>
+    <div class="col" style="text-align: center;">
+        <h1>Comunicación Componente -->Hijo<-- </h1>
+    </div>
+    <br>
+
+
+       <!-- <app-personaje-hijo *ngFor="let personaje of personajes; let i=index" [personajeDeLista]="personaje" [indice]="i" > -->
+        <app-personaje-hijo [personajeDeLista]="personajes">
+        </app-personaje-hijo>
+
+</div>
+
+
+
+

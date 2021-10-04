@@ -1,0 +1,134 @@
+<div class="row" style="margin-top: 30px;">
+    <div class="col-md-8 offset-2">
+        <div class="card">
+            <div class="card-header text-center">
+               <h3>Registro de Personaje</h3>
+            </div>
+            <div class="card-body">
+                <form [formGroup]="formPersonaje" novalidate (ngSubmit)="save($event)">
+                    <div class=" row">
+                        <label class="col-sm-3 form-label">Nombre* </label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" formControlName="nombre" placeholder="">
+                        </div>
+                        <div class="offset-3 control-error" *ngIf="campoNombre.errors && campoNombre.touched">
+                            <p *ngIf="campoNombre.hasError('required')">
+                              Es un campo requerido
+                            </p>
+                            <p *ngIf="campoNombre.hasError('maxlength')">
+                                El campo Nombre debe de tener máximo 30 caracteres.
+                            </p>
+                            <p *ngIf="campoNombre.hasError('minlength')">
+                                El campo Nombre debe de tener mínimo 2 caracteres.
+                            </p>
+                        </div>
+                    </div><br>
+                    <div class=" row">
+                        <label class="col-sm-3 form-label">Especie* </label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" formControlName="especie" placeholder="">
+                        </div>
+                        <div class="offset-3 control-error" *ngIf="campoEspecie.errors && campoEspecie.touched">
+                            <p *ngIf="campoEspecie.hasError('required')">
+                              Es un campo requerido
+                            </p>
+                            <p *ngIf="campoEspecie.hasError('maxlength')">
+                              El campo Especie debe de tener máximo 30 caracteres.
+                            </p>
+                            <p *ngIf="campoEspecie.hasError('minlength')">
+                                El campo Especie debe de tener mínimo 2 caracteres.
+                            </p>
+                        </div>
+                    </div><br>
+                    <div class=" row">
+                        <label class="col-sm-3 form-label">Genero*</label>
+                        <div class="col-sm-9">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" id="ck_male" type="radio" formControlName="genero" name="genero" value="male">
+                                <label class="form-check-label" for="ck_male">Masculino</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" id="ck_female" type="radio" formControlName="genero" name="genero" value="female" >
+                                <label class="form-check-label" for="ck_female">Femenino</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" id="ck_none" type="radio" formControlName="genero" name="genero" value="none" >
+                                <label class="form-check-label" for="ck_none">Ninguno</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" id="ck_genderfluid" type="radio" formControlName="genero" name="genero" value="genderfluid" >
+                                <label class="form-check-label" for="ck_genderfluid">Indeterminado</label>
+                            </div>
+                        </div>
+                        <div class="offset-3 control-error" *ngIf="campoGenero.errors && campoGenero.touched">
+                            <p *ngIf="campoGenero.hasError('required')">
+                                Debe de seleccionar una opción
+                            </p>
+                        </div>
+                    </div><br>
+                    <div class="row">
+                        <label class="col-sm-3 form-label">Origen*</label>
+                        <div class="col-sm-9">
+                            <select formControlName="origen" class="form-select" aria-label="Default select example">
+                                <option selected>Desconocido:</option>
+                                <option value="Eart">Tierra</option>
+                                <option value="FinalSpace">Final Space</option>
+                                <option value="TeraConPrime">Tera Con Prime</option>
+                              </select>
+                        </div>
+                        <div class="offset-3 control-error" *ngIf="campoOrigen.errors && campoOrigen.touched">
+                            <p *ngIf="campoOrigen.hasError('required')">
+                              Debe de seleccionar una opción
+                            </p>
+                        </div>
+                    </div><br>
+                    <div class=" row">
+                        <label class="col-sm-3 form-label">Habilidades</label>
+                        <div class="col-sm-9">
+                            <div class="form-check form-check-inline">
+                                <input class="btn-check btn-sm" FormControl="habilidad" value="piloting" type="checkbox" id="inlineCheckbox1">
+                                <label class="btn btn-outline-primary" for="inlineCheckbox1">Piloting</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="btn-check btn-sm" FormControl="habilidad" value="marksmanship" type="checkbox" id="inlineCheckbox2">
+                                <label class="btn btn-outline-primary" for="inlineCheckbox2">Marksmanship</label>
+                            </div>       
+                            <div class="form-check form-check-inline">
+                                <input class="btn-check btn-sm" FormControl="habilidad" value="electronics" type="checkbox" id="inlineCheckbox3">
+                                <label class="btn btn-outline-primary" for="inlineCheckbox3">Electronics</label>
+                            </div>           
+                            <div class="form-check form-check-inline">
+                                <input class="btn-check btn-sm" FormControl="habilidad" value="acrobatics" type="checkbox" id="inlineCheckbox4">
+                                <label class="btn btn-outline-primary" for="inlineCheckbox4">Acrobatics</label>
+                            </div>               
+                        </div>
+                    </div><br>
+                    <div class=" row">
+                        <label class="col-sm-3 form-label">Estado*</label>
+                        <div class="col-sm-9">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" id="ck_activo" type="radio" formControlName="estado" name="estado" value="Active">
+                                <label class="form-check-label" for="ck_activo">Activo</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" id="ck_inactivo" type="radio" formControlName="estado" name="estado" value="Inactive" >
+                                <label class="form-check-label" for="ck_inactivo">Inactivo</label>
+                            </div>
+                        </div>
+                        <div class="offset-3 control-error" *ngIf="campoEstado.errors && campoEstado.touched">
+                            <p *ngIf="campoEstado.hasError('required')">
+                              Debe de seleccionar una opción
+                            </p>
+                        </div>
+                    </div><br>
+                    <div class=" row">
+                        <div class="d-grid gap-2 col-6 mx-auto">
+                            <button type="submit" class="btn btn-primary" name="registrar_personaje">Registrar</button>
+                            <!-- <button type="submit" class="btn btn-primary" [disabled]="formPersonaje.invalid" name="registrar_personaje">Registrar</button> -->
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

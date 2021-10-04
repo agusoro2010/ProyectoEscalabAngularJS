@@ -1,0 +1,19 @@
+<div class="container-fluid" style="margin-top: 20px;">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="row justify-content-md-center">
+                <div class="card col-md-3" style="margin: 10px; background-color: #2c3e50;" *ngFor="let personaje of personajes" >
+                    <img class="img-fluid" style="padding: 10px;" src="{{personaje.img_url}}" alt="{{personaje.name}}">
+                    <div class="card-body">
+                      <h5 class="card-title" style="text-align: center; color:dodgerblue;">{{personaje.name}}</h5>
+                      <label>Estado: </label><p>{{ personaje.status | personajesFS}}</p><br>
+                      <label>Especie: </label><p>{{personaje.species}}</p><br>
+                      <label>Género: </label><p>{{personaje.gender}}</p><br>
+                      <label>Origen: </label><p>{{personaje.origin}}</p><br>
+                      <label>Habilidades: </label><p>{{personaje.abilities}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

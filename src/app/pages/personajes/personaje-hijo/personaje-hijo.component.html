@@ -1,0 +1,34 @@
+<!-- <div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="col" >
+                {{indice+1}}: {{personajeDeLista.nombre}} {{personajeDeLista.estado}} - {{personajeDeLista.origen}} - {{personajeDeLista.genero}}
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div class="table-responsive-md">
+<table class="table table-striped table-bordered" >
+    <thead>
+      <tr style="color: azure;">
+        <th scope="col">#</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Estado</th>
+        <th scope="col">Especie</th>
+        <th scope="col">Origen</th>
+        <th scope="col">Genero</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let personaje of personajeDeLista; let i=index" style="color: azure;">
+            <td>{{i+1}}</td>
+            <td>{{personaje.nombre}}</td>
+            <td>{{personaje.estado}}</td>
+            <td>{{personaje.especie}}</td>
+            <td>{{personaje.origen}}</td>
+            <td>{{personaje.genero}}</td>
+        </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,59 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);
+@import url(https://fonts.googleapis.com/css?family=Rubik:400,900);
+
+#card_container {
+  align-content: center;
+  width:auto;
+  height:auto;
+  padding: 10px;
+  justify-content: center;
+}
+
+#card {
+  color:#fff;
+  padding:20px;
+  background:url(../../../../assets/images/backgroundFS.jpg);
+  box-shadow:0px 45px 100px rgba(0, 0, 0, 0.4), inset 0 0 0 1000px rgba(0, 76, 86, 0.6);
+}
+
+#card .text-block {
+  position:relative;
+  z-index:2;
+  text-shadow:0 3 10 rgba(0, 0, 0, 0.7);
+}
+#card .text-block h1 {
+  font-family:'Rubik', Sans-serif;
+  font-size:2em;
+  margin:0;
+  text-transform:uppercase;
+  font-weight:700;
+}
+#card .text-block h1 small {
+  font-size:.5em;
+  color:#ccc;
+  position:relative;
+  bottom:10px;
+}
+#card .text-block h3 {
+  margin:0;
+  font-weight:400;
+}
+
+#card .text-block p {
+  font-weight:300;
+  width:60%;
+}
+
+#card_container .pg {
+  position:absolute;
+  height:auto;
+  width:30%;
+  right:-30px;
+  bottom:0px;
+  z-index:2;
+}
+
+#card_container .pg > img{
+  height:250px;
+  position: relative;
+}
